@@ -1,7 +1,9 @@
+import { useRoutes } from "react-router-dom";
+import routes from "./routes";
+import Layout from "./layout/Layout";
 function App() {
-  return (
-      <div className="bg-gradient-to-t bg-blue-300">Hello world</div>
-  );
+  const router = useRoutes(routes);
+  return <Layout>{router}</Layout>;
 }
 
 export default App;
