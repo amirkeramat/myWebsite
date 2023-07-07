@@ -16,6 +16,7 @@ const Menu = () => {
           key={item.id}
           after-dynamic-value={item.title}>
           <NavLink
+          target="_blank"
             onClick={() =>
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
             }
@@ -45,7 +46,7 @@ const Menu = () => {
             <i
               key={item.id}
               className='text-2xl w-full h-full flex  items-center justify-center'>
-              {item.icon}
+              <a target="_blank" href={item.href}> {item.icon}</a>
             </i>
           ))}
       </div>

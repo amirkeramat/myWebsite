@@ -27,7 +27,7 @@ export const menuItems = [
     id: 8,
     title: "Linkedin",
     icon: <LinkedinOutlined />,
-    href: "google.com",
+    href: "https://Linkedin.com",
     exLink: 1,
   },
   {
