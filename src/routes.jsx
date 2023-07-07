@@ -5,10 +5,10 @@ import Projects from './pages/projects/Projects';
 import Contact from './pages/contact/Contact';
 const routes = [
   { path: "/", element: <Home /> },
-  { path: "/about", element: <About /> },
-  { path: "/services", element: <Services /> },
-  { path: "/projects", element: <Projects /> },
-  { path: "/contact", element: <Contact /> },
+  { path: "about", element: <About /> },
+  { path: "services", element: <Services /> },
+  { path: "projects", element: <Projects /> },
+  { path: "contact", element: <Contact /> },
 ];
 
 export default routes
