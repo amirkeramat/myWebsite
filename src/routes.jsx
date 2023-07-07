@@ -4,11 +4,11 @@ import Services from './pages/services/Services'
 import Projects from './pages/projects/Projects';
 import Contact from './pages/contact/Contact';
 const routes = [
-  { path: "", element: <Home /> },
-  { path: "about", element: <About /> },
-  { path: "services", element: <Services /> },
-  { path: "projects", element: <Projects /> },
-  { path: "contact", element: <Contact /> },
+  { path: "myWebsite/", element: <Home /> },
+  { path: "myWebsite/about", element: <About /> },
+  { path: "myWebsite/services", element: <Services /> },
+  { path: "myWebsite/projects", element: <Projects /> },
+  { path: "myWebsite/contact", element: <Contact /> },
 ];
 
 export default routes
