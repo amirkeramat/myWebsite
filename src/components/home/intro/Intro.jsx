@@ -32,14 +32,14 @@ const Intro = () => {
         <img
           data-aos='zoom-in-left'
           data-aos-duration='700'
-          src='/code.png'
+          src='./code.png'
           className='w-full md:w-[50%] h-[300px] hidden md:block md:order-1'
           alt=''
         />
         <img
           data-aos='zoom-in-right'
           data-aos-duration='700'
-          src='/my.png'
+          src='./my.png'
           className=' w-[400px] h-[400px] z-40 order-2'
           alt=''
         />

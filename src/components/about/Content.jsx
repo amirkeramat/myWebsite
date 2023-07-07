@@ -9,7 +9,7 @@ const Content = () => {
         <h6 className='text-center p-3 rounded mt-6 bg-zinc-950 text-zinc-50 text-3xl'>
           Amir Keramat
         </h6>
-        <img src='/aboutMe.jpg' className='h-[400px] rounded mix-blend-luminosity my-5' alt='' />
+        <img src='./aboutMe.jpg' className='h-[400px] rounded mix-blend-luminosity my-5' alt='' />
         <p className='text-transparent bg-gradient-to-tr from-lime-700 via-lime-300 bg-clip-text to-lime-100 text-3xl text-center mt-20'>
           Ready to discuss your project?
         </p>
