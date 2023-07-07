@@ -6,7 +6,7 @@ import {
   RouterContainer,
   Router,
 } from "./layout.style";
-import Menu from "../components/layout/menu/menu";
+import Menu from "../components/layout/menu/Menu";
 const Layout = ({ children }) => {
   return (
     <Container>
