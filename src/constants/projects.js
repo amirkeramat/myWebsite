@@ -30,7 +30,7 @@ export const latestProjectsItems = [
       { id: 1, src: "./bluebee.png" },
       { id: 2, src: "./bluebeeMobile.png" },
     ],
-    link: "https://blue-bee.ir",
+    link:"https://amirkeramat.github.io/digikala/",
     title: "Shopping Website",
     desc: "a shopping website with real api and backend",
     tech: [
