@@ -1,8 +1,9 @@
-import React from 'react'
-
+import Content from "../../components/contact/Content"
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div className="flex items-center h-full">
+      <Content/>
+    </div>
   )
 }
 
