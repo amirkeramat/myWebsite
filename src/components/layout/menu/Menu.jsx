@@ -16,7 +16,6 @@ const Menu = () => {
           key={item.id}
           after-dynamic-value={item.title}>
           <NavLink
-          target="_blank"
             onClick={() =>
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
             }
