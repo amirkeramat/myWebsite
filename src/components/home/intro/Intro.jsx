@@ -1,7 +1,7 @@
 import Typewriter from "typewriter-effect";
 import { RightOutlined } from "@ant-design/icons";
 import Swal from "sweetalert2";
-import { PER_RESUME, EN_RESUME } from "./env/env";
+import { PER_RESUME, EN_RESUME } from "../../../api/index";
 const Intro = () => {
   const downloadHandler = () => {
     Swal.fire({
