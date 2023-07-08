@@ -54,7 +54,7 @@ export const aboutMe = [
   {
     id: 1,
     title: "1.About Me",
-    desc: "Im was born in 1996 in Iran-Tabriz. I Get my university degree in 2017 I started to learn Web development in 2020 and life is going on....",
+    desc: "Im was born in 1996 in Iran-Tabriz. I Get my university degree in 2019 I started to learn Web development in 2020 and life is going on....",
   },
   {
     id: 2,
