@@ -1,5 +1,4 @@
 const RateBox = ({ rate, icon, title }) => {
-  console.log([...Array(rate).keys()]);
   return (
     <span className='flex items-center justify-evenly   p-2'>
       <span className="flex items-center">
