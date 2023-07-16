@@ -2,6 +2,7 @@ import Typewriter from "typewriter-effect";
 import { RightOutlined } from "@ant-design/icons";
 import { abilities, aboutMe } from "../../constants/abilities";
 import Abilities from "./abilities/Abilities";
+import { Link } from "react-router-dom";
 const Content = () => {
   return (
     <div className='w-full h-full flex pb-10 md:pb-0 flex-wrap md:flex-nowrap items-stretch'>
@@ -9,7 +10,11 @@ const Content = () => {
         <h6 className='text-center p-3 rounded mt-6 bg-zinc-950 text-zinc-50 text-3xl'>
           Amir Keramat
         </h6>
-        <img src='./aboutMe.jpg' className='h-[400px] rounded mix-blend-luminosity my-5' alt='' />
+        <img
+          src='./aboutMe.jpg'
+          className='h-[400px] rounded mix-blend-luminosity my-5'
+          alt=''
+        />
         <p className='text-transparent bg-gradient-to-tr from-lime-700 via-lime-300 bg-clip-text to-lime-100 text-3xl text-center mt-20'>
           Ready to discuss your project?
         </p>
@@ -18,12 +23,12 @@ const Content = () => {
         </p>
         <span className='w-[200px] h-[50px] relative bg-lime-500 ms-10 my-20 flex justify-center'>
           <button className='bg-white w-[210px] h-[50px] text-gray-950 font-serif absolute bottom-2 right-2'>
-            Get a Free Price Quote{" "}
+            <Link to={"/contact"}> Get a Free Price Quote </Link>
           </button>
         </span>
       </div>
       <div className='flex flex-col'>
-        <div className="bg-gradient-to-tr from-zinc-900 via-zinc-800 to-zinc-800 p-10">
+        <div className='bg-gradient-to-tr from-zinc-900 via-zinc-800 to-zinc-800 p-10'>
           <div className='flex flex-col py-4'>
             <h1 className='text-4xl font-sans font-bold text-white'>
               I'm Specialized in

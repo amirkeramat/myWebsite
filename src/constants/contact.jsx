@@ -25,7 +25,7 @@ export const contactItems = {
     {
       id: 2,
       title: "Email",
-      desc: "amir_karamat@yahoo.com",
+      desc: "amirkeramat.dev@gmail.com",
       icon: <MailFilled />,
       link: "mailto:amir_karamat@yahoo.com",
     },

@@ -1,4 +1,5 @@
 import {myServicesItems} from '../../../constants/services'
+import { Link } from 'react-router-dom';
 const MyServices = () => {
     const {title_1,title_2,desc,list} = myServicesItems
   return (
@@ -23,11 +24,11 @@ const MyServices = () => {
           </ul>
         </div>
       ))}
-      <div className='w-[75%] h-[70px]  relative bg-lime-500'>
-        <button className='bg-white w-[100%] hover:inset-0 transition-all duration-300 h-[70px] text-gray-950 font-serif absolute bottom-2 right-2'>
-          Get a Free Price Quote{" "}
+      <span className='w-[200px] h-[50px] relative bg-lime-500 ms-10 my-20 flex justify-center'>
+        <button className='bg-white w-[210px] h-[50px] text-gray-950 font-serif absolute bottom-2 right-2'>
+          <Link to={"/contact"}> Get a Free Price Quote </Link>
         </button>
-      </div>
+      </span>
     </div>
   );
 }

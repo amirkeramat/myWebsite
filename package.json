@@ -12,16 +12,21 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
+    "@emailjs/browser": "^3.11.0",
+    "@hookform/error-message": "^2.0.1",
+    "@hookform/resolvers": "^3.1.1",
     "@reduxjs/toolkit": "^1.9.5",
     "aos": "^3.0.0-beta.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.1",
     "react-redux": "^8.1.1",
     "react-router-dom": "^6.14.1",
     "redux": "^4.2.1",
-    "sweetalert2": "^11.7.12",
+    "sweetalert2": "^11.7.18",
     "tailwind-styled-components": "^2.2.0",
-    "typewriter-effect": "^2.20.1"
+    "typewriter-effect": "^2.20.1",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
