@@ -16,9 +16,10 @@ export const projectItems = [
   },
   {
     id: 1,
-    title: "IMDB",
-    content: "250 Best Films Built with react JS,Redux,tailwind CSS ",
-    href: "https://github.com/amirkeramat/imdb",
+    title: "Muvi",
+    content:
+      "Millions of movies, TV shows and people to discover. Explore now.",
+    href: "https://github.com/amirkeramat/muvi",
     desc: [{ id: 1, title: "JavaScript" }],
   },
 ];
@@ -30,7 +31,7 @@ export const latestProjectsItems = [
       { id: 1, src: "./bluebee.png" },
       { id: 2, src: "./bluebeeMobile.png" },
     ],
-    link:"https://amirkeramat.github.io/digikala/",
+    link: "https://amirkeramat.github.io/digikala/",
     title: "Shopping Website",
     desc: "a shopping website with real api and backend",
     tech: [
@@ -63,20 +64,20 @@ export const latestProjectsItems = [
   {
     id: 3,
     images: [
-      { id: 1, src: "./IMDB.png" },
-      { id: 2, src: "./IMDB-mobile.png" },
+      { id: 1, src: "./muvi.jpeg" },
+      { id: 2, src: "./muvi-2.jpeg" },
     ],
-    link: "https://imdb-fawn-six.vercel.app/",
-    title: "IMDB 250 Best Rating Films",
-    desc: "a Film Website That shows 250 Best Films Ever",
+    link: "https://amirkeramat.github.io/muvi/",
+    title: "Muvi",
+    desc: "Millions of movies, TV shows and people to discover. Explore now.",
     tech: [
       { id: 1, title: "React Js" },
       { id: 2, title: "Redux" },
       { id: 3, title: "Tailwind CSS" },
     ],
-    duration: "3day",
+    duration: "10day",
     role: "Front-End Developer",
     live: 1,
-    github: "https://github.com/amirkeramat/imdb",
+    github: "https://github.com/amirkeramat/muvi",
   },
 ];
