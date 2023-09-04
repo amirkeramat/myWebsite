@@ -7,7 +7,11 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 AOS.init();
 function App() {
   const router = useRoutes(routes);
-  return <Layout>{router}</Layout>;
+  return (
+    <Layout>
+    {router}
+    </Layout>
+  );
 }
 
 export default App;

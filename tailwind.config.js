@@ -4,6 +4,13 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+      addVariant("even", "&>*:nth-child(even)");
+      addVariant("odd", "&>*:nth-child(odd)");
+    },
+  ],
 };
 

@@ -5,7 +5,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import contactSchema from "../../validator/schema";
 import Swal from "sweetalert2";
 import { ErrorMessage } from "@hookform/error-message";
+import { useContext } from "react";
+import {LangContext} from "../../contexts/LangContext"
 const Content = () => {
+  const {lang} = useContext(LangContext)
   const {
     register,
     reset,
@@ -123,7 +126,7 @@ const Content = () => {
       <div className='flex flex-col items-center'>
         <input
           {...register(reg)}
-          className='p-2 bg-zinc-800 outline-none border-b  border-blue-500 focus:border focus:border-blue-500'
+          className='w-full p-2 bg-zinc-800 outline-none border-b  border-blue-500 focus:border focus:border-blue-500'
           placeholder={placeholder}
           type='text'
         />
@@ -132,24 +135,25 @@ const Content = () => {
     );
   };
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 text-zinc-100 px-4 py-8'>
-      <div className='flex flex-col space-y-4'>
-        <h4 className='text-5xl font-bold text-zinc-100'>{title_1}</h4>
-        <h3 className='text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-lime-500 via-lime-400 to-lime-300'>
-          {title_2}
+    <div className="grid grid-cols-1 md:grid-cols-3 text-zinc-100 px-4 py-8">
+      <div className="flex flex-col space-y-4">
+        <h4 className="text-2xl font-bold text-zinc-100">{lang === "ENG" ?title_1.eng : title_1.per}</h4>
+        <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-lime-500 via-lime-400 to-lime-300">
+          {lang === "ENG" ?title_2.eng : title_2.per}
         </h3>
         {desc.map((item) => (
-          <p className='text-zinc-400 text-xl my-2' key={item.id}>
-            {item.content}
+          <p className="text-zinc-400 text-xl my-2" key={item.id}>
+            { lang === "ENG" ? item.content.eng : item.content.per}
           </p>
         ))}
         <ul>
           {links.map((item) => (
             <li
-              className='flex flex-wrap justify-start items-baseline p-4 text-lg'
-              key={item.id}>
-              <i className='text-2xl me-2 text-zinc-500'>{item.icon}</i>
-              <p className='me-2 '>
+              className="flex flex-wrap justify-start items-baseline p-4 text-lg"
+              key={item.id}
+            >
+              <i className="text-2xl me-2 text-zinc-500">{item.icon}</i>
+              <p className="me-2 ">
                 {item.title}
                 {":"}
               </p>
@@ -162,64 +166,101 @@ const Content = () => {
           ))}
         </ul>
       </div>
-      <div className='col-span-1 md:col-span-2  bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-800 shadow-lg shadow-zinc-700'>
-        <form onSubmit={handleSubmit(formSubmitHandler)} className='' action=''>
-          <div className='space-y-2'>
-            <Label title={"Your contact information"} />
-            <fieldset className='grid grid-cols-1 md:grid-cols-3 gap-2 p-2 items-center'>
-              <Input reg={"first_name"} placeholder='FirstName' />
-              <Input reg={"last_name"} placeholder='LastName' />
-              <Input reg={"user_email"} placeholder='Email Address' />
-              <Input reg={"company"} placeholder='Company Name' />
-              <Input reg={"phone_number"} placeholder='PhoneNumber' />
-              <Input reg={"country"} placeholder='Country' />
+      <div className="col-span-1 md:col-span-2  bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-800 shadow-lg shadow-zinc-700">
+        <form onSubmit={handleSubmit(formSubmitHandler)} className="" action="">
+          <div className="space-y-2">
+            <Label title={lang === "ENG"?"Your contact information" : "اطلاعات ارتباطی شما"} />
+            <fieldset className="grid grid-cols-1 md:grid-cols-3 gap-2 p-2 items-center">
+              <Input
+                reg={"first_name"}
+                placeholder={lang === "ENG" ? "FirstName" : "نام"}
+              />
+              <Input
+                reg={"last_name"}
+                placeholder={lang === "ENG" ? "LastName" : "نام خانوادگی"}
+              />
+              <Input
+                reg={"user_email"}
+                placeholder={lang === "ENG" ? "Email Address" : "ایمیل"}
+              />
+              <Input
+                reg={"company"}
+                placeholder={lang === "ENG" ? "Company Name" : "نام شرکت"}
+              />
+              <Input
+                reg={"phone_number"}
+                placeholder={lang === "ENG" ? "PhoneNumber" : "شماره تلفن"}
+              />
+              <Input
+                reg={"country"}
+                placeholder={lang === "ENG" ? "Country" : "کشور یا شهر"}
+              />
             </fieldset>
           </div>
-          <div className='space-y-2'>
-            <Label title={"What services do you need for your project?"} />
-            <span className='text-center'>
+          <div className="space-y-2">
+            <Label title={lang === "ENG"?"What services do you need for your project?" : "چه درخواست هایی برای پرژه خود دارید"} />
+            <span className="text-center">
               <ErrorComp reg={"checkbox"} />
             </span>
-            <fieldset className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4 items-center'>
-              <CheckBox label={"Website Development"} />
-              <CheckBox label={"App Development"} />
-              <CheckBox label={"Design System"} />
-              <CheckBox label={"Website Migration"} />
-              <CheckBox label={"E-commerce Site"} />
-              <CheckBox label={"Performance Evaluation"} />
+            <fieldset className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4 items-center">
+              <CheckBox
+                label={lang === "ENG" ? "Website Development" : "توسعه وب"}
+              />
+              <CheckBox
+                label={lang === "ENG" ? "App Development" : "توسعه اپ"}
+              />
+              <CheckBox
+                label={lang === "ENG" ? "Design System" : "سیستم طراحی"}
+              />
+              <CheckBox
+                label={lang === "ENG" ? "Website Migration" : "تغییرات وب سایت"}
+              />
+              <CheckBox
+                label={
+                  lang === "ENG" ? "E-commerce Site" : "سایت تجارت الکترونیک"
+                }
+              />
+              <CheckBox
+                label={
+                  lang === "ENG" ? "Performance Evaluation" : "افزایش پرفورمنس"
+                }
+              />
             </fieldset>
           </div>
-          <div className='space-y-2'>
-            <Label title={"How much is the anticipated budget?"} />
-            <span className='text-center'>
+          <div className="space-y-2">
+            <Label title={ lang === "ENG" ?"How much is the anticipated budget?" : "بازه بودجه در نظر گرفته شده؟" } />
+            <span className="text-center">
               <ErrorComp reg={"radio"} />
             </span>
 
-            <fieldset className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4 items-center'>
-              <RadioInput label={"Less than $2,000"} />
-              <RadioInput label={"$2,000 - $10,000"} />
-              <RadioInput label={"More than $10,000"} />
+            <fieldset className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4 items-center">
+              <RadioInput label={lang === "ENG" ?"Less than $2,000" : "کمتر از ۵ میلیون تومان"} />
+              <RadioInput label={lang === "ENG" ?"$2,000 - $10,000" : "ما بین ۵ میلیون و ۲۰ میلیون"} />
+              <RadioInput label={lang === "ENG" ?"More than $10,000" : "بیش از ۲۰ میلیون تومان"} />
             </fieldset>
           </div>
           <div>
-            <Label title={"Tell me about your project"} />
-            <fieldset className='p-4'>
+            <Label title={ lang === "ENG" ? "Tell me about your project" : "توضیحات مختصری در مورد پروژه مد نظرتان بنویسید"} />
+            <fieldset className="p-4">
               <textarea
                 {...register("description")}
-                placeholder='Project Description'
-                name='description'
-                id='description'
-                className='w-full h-[100px] p-4 text-zinc-200 bg-zinc-800 outline-none text-xl'
+                placeholder={
+                  lang === "ENG" ? "Project Description" : "توضیحات پروژه"
+                }
+                name="description"
+                id="description"
+                className="w-full h-[100px] p-4 text-zinc-200 bg-zinc-800 outline-none text-sm"
               />
               <ErrorComp reg={"description"} />
             </fieldset>
           </div>
-          <div className='flex justify-center p-4'>
-            <div className='w-[50%] h-[70px]  relative bg-lime-500'>
+          <div className="flex justify-center p-4">
+            <div className="w-[50%] h-[70px]  relative bg-lime-500">
               <button
-                type='submit'
-                className='bg-white w-[100%] hover:inset-0 transition-all duration-300 h-[70px] text-gray-950 font-serif absolute bottom-2 right-2'>
-                Submit
+                type="submit"
+                className="bg-white w-[100%] hover:inset-0 transition-all duration-300 h-[70px] text-gray-950 font-serif absolute bottom-2 right-2"
+              >
+                {lang === "ENG" ? "Submit" : "ثبت"}
               </button>
             </div>
           </div>

@@ -29,7 +29,7 @@ export const latestProjectsItems = [
     id: 1,
     images: [
       { id: 1, src: "./bluebee.png" },
-      { id: 2, src: "./bluebeeMobile.png" },
+      { id: 2, src: "./bluebee2.png" },
     ],
     link: "https://amirkeramat.github.io/digikala/",
     title: "Shopping Website",
@@ -47,19 +47,22 @@ export const latestProjectsItems = [
   },
   {
     id: 2,
-    images: [{ id: 1, src: "./sabzlearn.png" }],
-    link: "#",
-    title: "Code Learning Website",
-    desc: "a website for learning stuffs with backend",
+    images: [
+      { id: 1, src: "./medical.png" },
+      { id: 1, src: "./medical2.png" }
+    ],
+    link: "https://amirkeramat.github.io/medical/",
+    title: "Medical Website",
+    desc: "Medical Website for Hospital or Doctors",
     tech: [
       { id: 1, title: "React Js" },
-      { id: 2, title: "Node Js" },
-      { id: 3, title: "MongoDB" },
+      { id: 2, title: "Tailwind CSS" },
+      { id: 3, title: "Json server" },
     ],
-    duration: "1month",
+    duration: "2 weeks",
     role: "Front-End Developer",
-    live: 0,
-    github: "https://github.com/amirkeramat/sabzlearn",
+    live: 1,
+    github: "https://github.com/amirkeramat/medical",
   },
   {
     id: 3,

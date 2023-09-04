@@ -50,15 +50,29 @@ export const abilities = [
   },
 ];
 
-export const aboutMe = [
-  {
-    id: 1,
-    title: "1.About Me",
-    desc: "Im was born in 1996 in Iran-Tabriz. I Get my university degree in 2019 I started to learn Web development in 2020 and life is going on....",
-  },
-  {
-    id: 2,
-    title: "2.Interests and Hobbies",
-    desc: "i love playing guitar and watching movies...and of course coding! and also i update my skills with new modern frameworks and im always be sure to increase my knowledge about web development.",
-  },
-];
+export const aboutMe = {
+  eng: [
+    {
+      id: 1,
+      title: "1.About Me",
+      desc: "I was born in 1996 in Iran-Tabriz. I Get my university degree in 2019 I started to learn Web development in 2020 and life is going on....",
+    },
+    {
+      id: 2,
+      title: "2.Interests and Hobbies",
+      desc: "i love playing guitar and watching movies...and of course coding! and also i update my skills with new modern frameworks and im always be sure to increase my knowledge about web development.",
+    },
+  ],
+  per: [
+    {
+      id: 1,
+      title: "۱.درباره من",
+      desc: "من متولد 1375 در ایران-تبریز هستم. من مدرک دانشگاهی خود را در سال 2019 دریافت کردم در سال 2020 شروع به یادگیری توسعه وب کردم و زندگی در جریان است.",
+    },
+    {
+      id: 2,
+      title: "۲.علایق و سرگرمی های من",
+      desc: "من عاشق نواختن گیتار و تماشای فیلم هستم ... و البته برنامه نویسی! و همچنین مهارت های خود را با چارچوب های مدرن جدید به روز می کنم و همیشه مطمئن هستم که دانش خود را در مورد توسعه وب افزایش خواهم داد.",
+    },
+  ],
+};

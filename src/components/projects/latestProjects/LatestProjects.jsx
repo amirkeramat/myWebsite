@@ -21,7 +21,7 @@ const LatestProjects = ({ item }) => {
           <img
             key={image.id}
             src={image.src}
-            className='w-[240px] h-[240px] p-2'
+            className='w-[240px] h-[240px] p-2 object-contain'
           />
         ))}
       </div>
