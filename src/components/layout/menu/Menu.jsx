@@ -15,6 +15,7 @@ const Menu = () => {
             window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
           }
           $exLink={item.exLink === 1}
+          $language={lang === "ENG"}
           key={item.id}
           after-dynamic-value={item.title}
         >
