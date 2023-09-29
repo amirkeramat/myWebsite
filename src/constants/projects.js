@@ -8,14 +8,14 @@ export const projectItems = [
     desc: [{ id: 1, title: "JavaScript" }],
   },
   {
-    id: 1,
+    id: 2,
     title: "MyPortfolio",
     content: "My Portfolio built with react JS,tailwind CSS,styled-component",
     href: "https://github.com/amirkeramat/myWebsite",
     desc: [{ id: 1, title: "JavaScript" }],
   },
   {
-    id: 1,
+    id: 3,
     title: "Muvi",
     content:
       "Millions of movies, TV shows and people to discover. Explore now.",
@@ -49,7 +49,7 @@ export const latestProjectsItems = [
     id: 2,
     images: [
       { id: 1, src: "./medical.png" },
-      { id: 1, src: "./medical2.png" }
+      { id: 1, src: "./medical2.png" },
     ],
     link: "https://amirkeramat.github.io/medical/",
     title: "Medical Website",
@@ -82,5 +82,45 @@ export const latestProjectsItems = [
     role: "Front-End Developer",
     live: 1,
     github: "https://github.com/amirkeramat/muvi",
+  },
+  {
+    id: 4,
+    images: [
+    ],
+    link: "https://amirkeramat-ecommerce-store.vercel.app/",
+    title: "Ecommerce-store",
+    desc: "Ecommerce-store developed by nextJs13. ",
+    tech: [
+      { id: 1, title: "NextJs 13" },
+      { id: 2, title: "React js" },
+      { id: 3, title: "Tailwind CSS" },
+      { id: 4, title: "Headless Ui" },
+      { id: 4, title: "stripe" },
+    ],
+    duration: "10day",
+    role: "Front-End Developer",
+    live: 1,
+    github: "https://github.com/amirkeramat/ecommerce-store",
+  },
+  {
+    id: 5,
+    images: [
+    ],
+    link: "https://amirkeramat-ecommerce-dashboard.vercel.app/",
+    title: "Ecommerce-dashboard",
+    desc: "Admin panel for Ecommerce-store.you can create your special store with exclusive categories and filters ,banners,billboards ",
+    tech: [
+      { id: 1, title: "NextJs 13" },
+      { id: 2, title: "React Js" },
+      { id: 3, title: "Tailwind CSS" },
+      { id: 4, title: "Prisma" },
+      { id: 5, title: "Clerk" },
+      { id: 6, title: "Zostand" },
+      { id: 7, title: "Shadcn Ui" },
+    ],
+    duration: "10day",
+    role: "Full stack Developer",
+    live: 1,
+    github: "https://github.com/amirkeramat/ecommerce-dashboard",
   },
 ];
