@@ -86,6 +86,8 @@ export const latestProjectsItems = [
   {
     id: 4,
     images: [
+      { id: 1, src: "./ecommerce-dashboard.png" },
+      { id: 2, src: "./ecommerce-dashboard2.png" },
     ],
     link: "https://amirkeramat-ecommerce-store.vercel.app/",
     title: "Ecommerce-store",
@@ -105,6 +107,8 @@ export const latestProjectsItems = [
   {
     id: 5,
     images: [
+      { id: 1, src: "./ecommerce-store.png" },
+      { id: 2, src: "./ecommerce-store2.png" },
     ],
     link: "https://amirkeramat-ecommerce-dashboard.vercel.app/",
     title: "Ecommerce-dashboard",
@@ -122,5 +126,28 @@ export const latestProjectsItems = [
     role: "Full stack Developer",
     live: 1,
     github: "https://github.com/amirkeramat/ecommerce-dashboard",
+  },
+  {
+    id: 6,
+    images: [
+      { id: 1, src: "./text-me.png" },
+      { id: 2, src: "./text-me2.png" },
+    ],
+    link: "https://text-me-iota.vercel.app/",
+    title: "Realtime messenger",
+    desc: "real time messenger project developed by nextJs13",
+    tech: [
+      { id: 1, title: "NextJs 13" },
+      { id: 2, title: "React Js" },
+      { id: 3, title: "Tailwind CSS" },
+      { id: 4, title: "Prisma" },
+      { id: 5, title: "Pusher" },
+      { id: 6, title: "Zostand" },
+      { id: 7, title: "NextAuth" },
+    ],
+    duration: "20day",
+    role: "Full stack Developer",
+    live: 1,
+    github: "https://github.com/amirkeramat/realtime-messenger",
   },
 ];
