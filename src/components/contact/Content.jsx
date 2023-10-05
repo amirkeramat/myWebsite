@@ -6,9 +6,9 @@ import contactSchema from "../../validator/schema";
 import Swal from "sweetalert2";
 import { ErrorMessage } from "@hookform/error-message";
 import { useContext } from "react";
-import {LangContext} from "../../contexts/LangContext"
+import { LangContext } from "../../contexts/LangContext";
 const Content = () => {
-  const {lang} = useContext(LangContext)
+  const { lang } = useContext(LangContext);
   const {
     register,
     reset,
@@ -27,7 +27,7 @@ const Content = () => {
         render={({ messages }) =>
           messages &&
           Object.entries(messages).map(([type, message]) => (
-            <p className='text-red-400' key={type}>
+            <p className="text-red-400" key={type}>
               {message}
             </p>
           ))
@@ -55,7 +55,7 @@ const Content = () => {
         "portfolio-contact",
         "portfolio-contact",
         formData,
-        "e7rAlN68iihiwL1EQ"
+        "e7rAlN68iihiwL1EQ",
       )
       .then((res) => {
         if (res.status === 200) {
@@ -87,11 +87,11 @@ const Content = () => {
 
   const CheckBox = ({ label }) => {
     return (
-      <div className='flex items-center'>
+      <div className="flex items-center">
         <input
           id={label}
-          className='w-[20px] h-[20px] m-2 '
-          type='checkbox'
+          className="w-[20px] h-[20px] m-2 "
+          type="checkbox"
           value={label}
           {...register("checkbox")}
         />
@@ -101,12 +101,12 @@ const Content = () => {
   };
   const RadioInput = ({ label }) => {
     return (
-      <div className='flex items-center'>
+      <div className="flex items-center">
         <input
           id={label}
-          className='w-[20px] h-[20px] m-2'
-          name='money'
-          type='radio'
+          className="w-[20px] h-[20px] m-2"
+          name="money"
+          type="radio"
           value={label}
           {...register("radio")}
         />
@@ -116,19 +116,19 @@ const Content = () => {
   };
   const Label = ({ title }) => {
     return (
-      <label className='w-full block p-4 bg-gradient-to-tl from-zinc-900 via-zinc-900 to-zinc-950'>
+      <label className="w-full block p-4 bg-gradient-to-tl from-zinc-900 via-zinc-900 to-zinc-950">
         {title}
       </label>
     );
   };
   const Input = ({ placeholder, reg }) => {
     return (
-      <div className='flex flex-col items-center'>
+      <div className="flex flex-col items-center">
         <input
           {...register(reg)}
-          className='w-full p-2 bg-zinc-800 outline-none border-b  border-blue-500 focus:border focus:border-blue-500'
+          className="w-full p-2 bg-zinc-800 outline-none border-b  border-blue-500 focus:border focus:border-blue-500"
           placeholder={placeholder}
-          type='text'
+          type="text"
         />
         <ErrorComp reg={reg} />
       </div>
@@ -137,13 +137,15 @@ const Content = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 text-zinc-100 px-4 py-8">
       <div className="flex flex-col space-y-4">
-        <h4 className="text-2xl font-bold text-zinc-100">{lang === "ENG" ?title_1.eng : title_1.per}</h4>
+        <h4 className="text-2xl font-bold text-zinc-100">
+          {lang === "ENG" ? title_1.eng : title_1.per}
+        </h4>
         <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-lime-500 via-lime-400 to-lime-300">
-          {lang === "ENG" ?title_2.eng : title_2.per}
+          {lang === "ENG" ? title_2.eng : title_2.per}
         </h3>
         {desc.map((item) => (
           <p className="text-zinc-400 text-xl my-2" key={item.id}>
-            { lang === "ENG" ? item.content.eng : item.content.per}
+            {lang === "ENG" ? item.content.eng : item.content.per}
           </p>
         ))}
         <ul>
@@ -169,7 +171,13 @@ const Content = () => {
       <div className="col-span-1 md:col-span-2  bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-800 shadow-lg shadow-zinc-700">
         <form onSubmit={handleSubmit(formSubmitHandler)} className="" action="">
           <div className="space-y-2">
-            <Label title={lang === "ENG"?"Your contact information" : "اطلاعات ارتباطی شما"} />
+            <Label
+              title={
+                lang === "ENG"
+                  ? "Your contact information"
+                  : "اطلاعات ارتباطی شما"
+              }
+            />
             <fieldset className="grid grid-cols-1 md:grid-cols-3 gap-2 p-2 items-center">
               <Input
                 reg={"first_name"}
@@ -198,7 +206,13 @@ const Content = () => {
             </fieldset>
           </div>
           <div className="space-y-2">
-            <Label title={lang === "ENG"?"What services do you need for your project?" : "چه درخواست هایی برای پرژه خود دارید"} />
+            <Label
+              title={
+                lang === "ENG"
+                  ? "What services do you need for your project?"
+                  : "چه درخواست هایی برای پرژه خود دارید"
+              }
+            />
             <span className="text-center">
               <ErrorComp reg={"checkbox"} />
             </span>
@@ -228,19 +242,47 @@ const Content = () => {
             </fieldset>
           </div>
           <div className="space-y-2">
-            <Label title={ lang === "ENG" ?"How much is the anticipated budget?" : "بازه بودجه در نظر گرفته شده؟" } />
+            <Label
+              title={
+                lang === "ENG"
+                  ? "How much is the anticipated budget?"
+                  : "بازه بودجه در نظر گرفته شده؟"
+              }
+            />
             <span className="text-center">
               <ErrorComp reg={"radio"} />
             </span>
 
             <fieldset className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4 items-center">
-              <RadioInput label={lang === "ENG" ?"Less than $2,000" : "کمتر از ۵ میلیون تومان"} />
-              <RadioInput label={lang === "ENG" ?"$2,000 - $10,000" : "ما بین ۵ میلیون و ۲۰ میلیون"} />
-              <RadioInput label={lang === "ENG" ?"More than $10,000" : "بیش از ۲۰ میلیون تومان"} />
+              <RadioInput
+                label={
+                  lang === "ENG" ? "Less than $2,000" : "کمتر از ۵ میلیون تومان"
+                }
+              />
+              <RadioInput
+                label={
+                  lang === "ENG"
+                    ? "$2,000 - $10,000"
+                    : "ما بین ۵ میلیون و ۲۰ میلیون"
+                }
+              />
+              <RadioInput
+                label={
+                  lang === "ENG"
+                    ? "More than $10,000"
+                    : "بیش از ۲۰ میلیون تومان"
+                }
+              />
             </fieldset>
           </div>
           <div>
-            <Label title={ lang === "ENG" ? "Tell me about your project" : "توضیحات مختصری در مورد پروژه مد نظرتان بنویسید"} />
+            <Label
+              title={
+                lang === "ENG"
+                  ? "Tell me about your project"
+                  : "توضیحات مختصری در مورد پروژه مد نظرتان بنویسید"
+              }
+            />
             <fieldset className="p-4">
               <textarea
                 {...register("description")}

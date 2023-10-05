@@ -2,10 +2,10 @@ import { menuItems } from "../../../constants/menuItems";
 import { Container, Icon } from "./menu.style";
 import { NavLink } from "react-router-dom";
 import { MoreOutlined } from "@ant-design/icons";
-import { useState,useContext } from "react";
-import {LangContext} from "../../../contexts/LangContext"
+import { useState, useContext } from "react";
+import { LangContext } from "../../../contexts/LangContext";
 const Menu = () => {
-  const {lang} = useContext(LangContext)
+  const { lang } = useContext(LangContext);
   const [toggle, setToggle] = useState(false);
   return (
     <Container>
