@@ -42,7 +42,7 @@ export const contactItems = {
       title: "Linkedin",
       desc: "amirkeramat",
       icon: <LinkedinFilled />,
-      link: "#",
+      link: "https://www.linkedin.com/in/amir-keramat-8196b6298",
     },
     {
       id: 4,
