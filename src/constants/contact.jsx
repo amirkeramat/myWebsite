@@ -49,7 +49,7 @@ export const contactItems = {
       title: "Telegram",
       desc: "amirkeramat",
       icon: <CommentOutlined />,
-      link: "https://t.me/amirkeramat",
+      link: "https://t.me/amirkeramat1",
     },
   ],
 };

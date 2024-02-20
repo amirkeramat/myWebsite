@@ -19,7 +19,7 @@ export const menuItems = [
     id: 7,
     title: "GitHub",
     icon: <GithubOutlined />,
-    href: "https://github.com/amirkeramat1",
+    href: "https://github.com/amirkeramat",
     exLink: 1,
   },
   {
