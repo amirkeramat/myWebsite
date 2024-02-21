@@ -4,4 +4,4 @@ export const EN_RESUME =
   "https://drive.google.com/file/d/1yraaad3ASSgtasaPsLhbLu6fHyjQTYeu/view?usp=drive_link";
 
 export const PER_RESUME =
-  "https://drive.google.com/file/d/1f2cftusDv8-opmgC5z2UtHle3icVHwCz/view?usp=drive_link";
+  "https://drive.google.com/file/d/1bPhXE5rRJfEOHlQgTsItpX0PUhcdBGh5/view?usp=drive_link";
